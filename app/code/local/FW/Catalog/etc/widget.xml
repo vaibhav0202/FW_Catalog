@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    FW
+ * @package     FW_Catalog
+ * @copyright   Copyright (c) 2012 F+W Media, Inc. (http://www.fwmedia.com)
+ * @author      J.P. Daniel <jp.daniel@fwmedia.com>
+ */
+-->
+<widgets>
+    <catalog_product_block type="fw_catalog/product_widget_block">
+        <name>Catalog Product Block</name>
+        <description>Create Product Block</description>
+        <parameters>
+            <id translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Product</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/catalog_product_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Product...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>10</sort_order>
+            </id>
+        </parameters>
+    </catalog_product_block>
+    <catalog_product_featured_list type="fw_catalog/product_widget_list">
+        <name>Random Product List</name>
+        <description>Create a daily generated list of featured products</description>
+        <parameters>
+            <catalog_id translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Category</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/catalog_category_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Category...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>10</sort_order>
+            </catalog_id>
+        </parameters>
+    </catalog_product_featured_list>
+</widgets>

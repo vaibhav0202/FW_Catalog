@@ -1,0 +1,3 @@
+app/code/local/FW/Catalog/ app/code/local/FW/Catalog/
+app/design/frontend/fw/default/layout/fw/catalog.xml app/design/frontend/fw/default/layout/fw/catalog.xml
+app/etc/modules/FW_Catalog.xml app/etc/modules/FW_Catalog.xml

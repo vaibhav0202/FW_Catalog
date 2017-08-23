@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    FW
+ * @package     FW_Catalog
+ * @copyright   Copyright (c) 2013 F+W Media, Inc. (http://www.fwmedia.com)
+ * @author      J.P. Daniel <jp.daniel@fwmedia.com>
+ */
+-->
+<config>
+    <modules>
+        <FW_Catalog>
+            <version>0.2.0</version>
+        </FW_Catalog>
+    </modules>
+    <global>
+        <blocks>
+            <fw_catalog>
+                <class>FW_Catalog_Block</class>
+            </fw_catalog>
+            <catalog>
+                <rewrite>
+                    <product_list_toolbar>FW_Catalog_Block_Product_List_Toolbar</product_list_toolbar>
+                </rewrite>
+            </catalog>
+        </blocks>
+        <models>
+            <fw_catalog>
+                <class>FW_Catalog_Model</class>
+            </fw_catalog>
+            <catalog>
+                <rewrite>
+                    <design>FW_Catalog_Model_Design</design>
+                    <observer>FW_Catalog_Model_Observer</observer>
+                </rewrite>
+            </catalog>
+        </models>
+        <resources>
+            <fw_catalog_setup>
+                <setup>
+                    <module>FW_Catalog</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+            </fw_catalog_setup>
+        </resources>
+    </global>
+    <frontend>
+        <events>            
+            <controller_action_layout_load_before>
+                <observers>
+                    <fw_catalog_controller_action_layout_load_before>
+                        <class>fw_catalog/observer</class>
+                        <method>addCategoryLayoutHandle</method>                      
+                    </fw_catalog_controller_action_layout_load_before>
+                </observers>
+            </controller_action_layout_load_before>
+        </events>
+        <layout>
+            <updates>
+                <fw_catalog>
+                    <file>fw_catalog.xml</file>
+                </fw_catalog>
+            </updates>
+        </layout>
+    </frontend>
+</config>

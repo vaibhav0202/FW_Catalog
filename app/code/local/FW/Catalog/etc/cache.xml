@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Creates placeholders in FPC using our custom container
+ *
+ * @category    FW
+ * @package     FW_Catalog
+ * @copyright   Copyright (c) 2013 F+W Media, Inc. (http://www.fwmedia.com)
+ * @author      J.P. Daniel <jp.daniel@fwmedia.com>
+ */
+-->
+<config>
+    <placeholders>
+        <fw_catalog_product_list_featured>
+            <block>fw_catalog/product_list_featured</block>
+            <placeholder>CATALOG_PRODUCT_LIST_FEATURED</placeholder>
+            <container>FW_Catalog_Model_Container_Product_List_Featured</container>
+        </fw_catalog_product_list_featured>
+        <fw_catalog_product_list_picks>
+            <block>fw_catalog/product_list_picks</block>
+            <placeholder>CATALOG_PRODUCT_LIST_PICKS</placeholder>
+            <container>FW_Catalog_Model_Container_Product_List_Featured</container>
+        </fw_catalog_product_list_picks>
+        <fw_catalog_product_list_offers>
+            <block>fw_catalog/product_list_offer</block>
+            <placeholder>CATALOG_PRODUCT_LIST_OFFER</placeholder>
+            <container>FW_Catalog_Model_Container_Product_List_Featured</container>
+        </fw_catalog_product_list_offers>
+    </placeholders>
+</config>
